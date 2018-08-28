@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-// import chart container
+import ChartContainer from './containers/ChartContainer.js';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <h1>Testing</h1>
+    <ChartContainer />
     );
   }
 }
