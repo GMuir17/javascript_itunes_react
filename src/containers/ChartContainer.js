@@ -7,8 +7,10 @@ class ChartContainer extends React.Component {
     super(props);
     this.state = {
       songs: [],
-      selectedSong: null
+      selectedSong: null,
+      selectedSongIndex: null
     };
+    this.handleSongSelected = this.handleSongSelected.bind(this);
   };
 
   componentDidMount() {
@@ -25,14 +27,24 @@ class ChartContainer extends React.Component {
       });
   };
 
+  handleSongSelected(index) {
+    const selectedSong = this.state.songs.feed.entry[index];
+    this.setState({ selectedSong: selectedSong });
+    this.setState({ selectedSongIndex: index });
+  };
+
   render() {
     return (
       <div>
         <h1>Itunes Chart</h1>
         <SongSelector
           songs={this.state.songs}
+          onSongSelected={this.handleSongSelected}
         />
-        <SongDetail />
+        <SongDetail
+          selectedSong={this.state.selectedSong}
+          selectedSongIndex={this.state.selectedSongIndex}
+        />
       </div>
     )
   };
