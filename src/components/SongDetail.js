@@ -8,9 +8,9 @@ const SongDetail = (props) => {
 
   return (
     <div>
-      <h3>At Position {chartPosition}</h3>
-      <h4>Title - {props.selectedSong["im:name"].label}</h4>
-      <h4>Artist - {props.selectedSong["im:artist"].label}</h4>
+      <h3>At Position {chartPosition}:</h3>
+      <p>Title - {props.selectedSong["im:name"].label}</p>
+      <p>Artist - {props.selectedSong["im:artist"].label}</p>
     </div>
   );
 }
