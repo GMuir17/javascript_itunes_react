@@ -1,7 +1,9 @@
 import React from 'react';
 
 const SongDetail = () => {
-  return ();
+  return (
+    <div></div>
+  );
 }
 
 export default SongDetail;

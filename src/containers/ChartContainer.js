@@ -3,12 +3,22 @@ import SongDetail from '../components/SongDetail.js';
 import SongSelector from '../components/SongSelector.js';
 
 class ChartContainer extends React.Component {
-  constructor() {
-
-  }
+  constructor(props) {
+    super(props);
+    this.state = {
+      songs: [],
+      selectedSong: null
+    };
+  };
 
   render() {
-    return
+    return (
+      <div>
+        <h1>Itunes Chart</h1>
+        <SongSelector />
+        <SongDetail />
+      </div>
+    )
   }
 }
 
